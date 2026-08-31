@@ -1,8 +1,22 @@
 {
     "name": "aegisora/date-format-rule",
-    "description": "<REPOSITORY_DESCRIPTION>",
+    "description": "Date Format Rule provides a simple, rule-based date/time format validation implementation for the Aegisora ecosystem",
     "type": "library",
-    "keywords": ["php", "aegisora", "aegisora-ecosystem"],
+    "keywords": [
+        "php",
+        "aegisora",
+        "aegisora-ecosystem",
+        "date",
+        "datetime",
+        "date-format",
+        "datetime-format",
+        "date-time",
+        "format",
+        "date-validation",
+        "validation",
+        "rule",
+        "string-validation"
+    ],
     "homepage": "https://github.com/Aegisora/date-format-rule",
     "support": {
         "issues": "https://github.com/Aegisora/date-format-rule/issues",
