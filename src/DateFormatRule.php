@@ -66,10 +66,6 @@ class DateFormatRule extends Rule
     {
         $errors = DateTimeImmutable::getLastErrors();
 
-        if ($errors === false) {
-            return false;
-        }
-
-        return $errors['warning_count'] > 0 || $errors['error_count'] > 0;
+        return is_array($errors) && ($errors['warning_count'] > 0 || $errors['error_count'] > 0);
     }
 }
