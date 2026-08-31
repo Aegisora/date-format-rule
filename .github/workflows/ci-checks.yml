@@ -1,0 +1,64 @@
+name: CI-CHECKS
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - AEGISORA*
+
+jobs:
+  run-phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+      - name: Run PHPCodesniffer
+        run: ./vendor/bin/phpcs -p -s --standard=phpcs.xml src tests
+  run-php-stan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse -c phpstan.neon.dist
+  run-php-unit-tests:
+    needs: [ run-phpcs, run-php-stan ]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+      - name: Execute tests
+        run: vendor/bin/phpunit -c phpunit.xml --colors=always --verbose --testdox
+  run-assemble-php-unit-coverage:
+    needs: [ run-php-unit-tests ]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4.0'
+          coverage: xdebug
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+      - name: Execute tests
+        run: vendor/bin/phpunit -c phpunit.xml --coverage-text --colors=always --verbose --testdox
+        env:
+          XDEBUG_MODE: coverage
+      - name: Generate test coverage badge
+        uses: timkrase/phpunit-coverage-badge@v1.2.0
+        with:
+          report: ./clover.xml
+          coverage_badge_path: 'badge.svg'
+          push_badge: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}

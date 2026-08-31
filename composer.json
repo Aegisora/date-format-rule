@@ -1,0 +1,66 @@
+{
+    "name": "aegisora/<REPOSITORY_NAME>",
+    "description": "<REPOSITORY_DESCRIPTION>",
+    "type": "library",
+    "keywords": ["php", "aegisora", "aegisora-ecosystem"],
+    "homepage": "https://github.com/Aegisora/<REPOSITORY_NAME>",
+    "support": {
+        "issues": "https://github.com/Aegisora/<REPOSITORY_NAME>/issues",
+        "source": "https://github.com/Aegisora/<REPOSITORY_NAME>"
+    },
+    "authors": [
+        {
+            "name": "Arslan Imamutdinov",
+            "email": "ara.imamutdinov@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aegisora\\<PACKAGE>\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aegisora\\<PACKAGE>\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "archive": {
+        "exclude": [
+            "/.github",
+            "/tests",
+            "/vendor",
+            "/.gitignore",
+            "/badge.svg",
+            "/clover.xml",
+            "/composer.lock",
+            "/CONTRIBUTING.md",
+            "/docker-compose.yml",
+            "/Dockerfile",
+            "/docker-compose-up.sh",
+            "/docker-compose-down.sh",
+            "/docker-deploy.sh",
+            "/docker-run-checks.sh",
+            "/docker-run-phpcs.sh",
+            "/docker-run-phpstan.sh",
+            "/docker-run-unit-tests.sh",
+            "/phpcs.xml",
+            "/phpstan.neon.dist",
+            "/phpunit.xml"
+        ]
+    }
+}
