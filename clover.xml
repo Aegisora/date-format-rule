@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1788193540">
-  <project timestamp="1788193540">
+<coverage generated="1788193887">
+  <project timestamp="1788193887">
     <file name="/home/runner/work/date-format-rule/date-format-rule/src/DateFormatRule.php">
       <class name="Aegisora\Rules\DateFormatRule" namespace="global">
-        <metrics complexity="12" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="26" coveredelements="0"/>
+        <metrics complexity="12" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="20" elements="26" coveredelements="24"/>
       </class>
-      <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="21" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="25" type="method" name="executeValidate" visibility="protected" complexity="3" crap="12" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="29" type="stmt" count="0"/>
-      <line num="31" type="stmt" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
-      <line num="36" type="stmt" count="0"/>
-      <line num="37" type="stmt" count="0"/>
-      <line num="43" type="method" name="validateFormat" visibility="private" complexity="2" crap="6" count="0"/>
-      <line num="45" type="stmt" count="0"/>
-      <line num="46" type="stmt" count="0"/>
-      <line num="50" type="method" name="matchesFormat" visibility="private" complexity="3" crap="12" count="0"/>
-      <line num="52" type="stmt" count="0"/>
-      <line num="54" type="stmt" count="0"/>
-      <line num="55" type="stmt" count="0"/>
-      <line num="58" type="stmt" count="0"/>
-      <line num="59" type="stmt" count="0"/>
-      <line num="62" type="stmt" count="0"/>
-      <line num="65" type="method" name="hasParsingProblems" visibility="private" complexity="3" crap="12" count="0"/>
-      <line num="67" type="stmt" count="0"/>
-      <line num="69" type="stmt" count="0"/>
+      <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="40"/>
+      <line num="21" type="stmt" count="40"/>
+      <line num="22" type="stmt" count="40"/>
+      <line num="25" type="method" name="executeValidate" visibility="protected" complexity="3" crap="3" count="40"/>
+      <line num="27" type="stmt" count="40"/>
+      <line num="29" type="stmt" count="39"/>
+      <line num="31" type="stmt" count="39"/>
+      <line num="32" type="stmt" count="14"/>
+      <line num="35" type="stmt" count="25"/>
+      <line num="36" type="stmt" count="13"/>
+      <line num="37" type="stmt" count="25"/>
+      <line num="43" type="method" name="validateFormat" visibility="private" complexity="2" crap="2" count="40"/>
+      <line num="45" type="stmt" count="40"/>
+      <line num="46" type="stmt" count="1"/>
+      <line num="50" type="method" name="matchesFormat" visibility="private" complexity="3" crap="3" count="25"/>
+      <line num="52" type="stmt" count="25"/>
+      <line num="54" type="stmt" count="25"/>
+      <line num="55" type="stmt" count="6"/>
+      <line num="58" type="stmt" count="19"/>
+      <line num="59" type="stmt" count="4"/>
+      <line num="62" type="stmt" count="15"/>
+      <line num="65" type="method" name="hasParsingProblems" visibility="private" complexity="3" crap="3.14" count="19"/>
+      <line num="67" type="stmt" count="19"/>
+      <line num="69" type="stmt" count="19"/>
       <line num="70" type="stmt" count="0"/>
-      <line num="73" type="stmt" count="0"/>
-      <metrics loc="76" ncloc="73" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="26" coveredelements="0"/>
+      <line num="73" type="stmt" count="19"/>
+      <metrics loc="76" ncloc="73" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="20" elements="26" coveredelements="24"/>
     </file>
-    <metrics files="1" loc="76" ncloc="73" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="26" coveredelements="0"/>
+    <metrics files="1" loc="76" ncloc="73" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="20" elements="26" coveredelements="24"/>
   </project>
 </coverage>
